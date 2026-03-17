@@ -1,4 +1,5 @@
 # Virtual Mobile Network Operators (VMNO) Analysis
+This is a work to compare the peformance between a physical MNO and its virtual MNOs.
 ## Notation
 - M: Main (physical) operator
 - V1: Virtual operator 1
