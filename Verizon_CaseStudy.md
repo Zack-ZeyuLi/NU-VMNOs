@@ -1,4 +1,4 @@
-# Verizon (M) & Visible (V1) & Twigby (V2)
+# Verizon(M) & Visible(V1) & Twigby(V2)
 ## Atlanta
 ### Location 4 DL
 #### Run 1, isolated running
