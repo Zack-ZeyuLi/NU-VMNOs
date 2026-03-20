@@ -149,6 +149,10 @@ For DL only since all UL cases are 677.
 </p>
 <p align="center">
     <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_MV2_DL_qci.png" width="80%" />
+    <br>
+    <span style="font-size: 10px;">
+    *Qci7 was competing with Qci6, which makes it look bad
+    </span>
 </p>
 <p align="center">
     <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_V1V2_DL_qci.png" width="80%" />
