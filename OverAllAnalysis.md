@@ -115,3 +115,188 @@
 |M vs V2 (89)|14|5|--|9|
 |V1 vs V2 (89)|14|--|9|5|
 |Running Simultaneously (889)|14|5|5|4|
+
+## TMobile - CDF
+### TMobile in Boston overall
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_BOS/CDF_solo_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_BOS/CDF_MV1_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_BOS/CDF_MV2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_BOS/CDF_V1V2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_BOS/CDF_MV1V2_UL_throughput.png" width="45%" />
+</p>
+
+### TMobile in Boston differentiating between Qcis
+For DL only since all UL cases are 677.
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_solo_DL_qci.png" width="80%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_MV1_DL_qci.png" width="80%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_MV2_DL_qci.png" width="80%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_V1V2_DL_qci.png" width="80%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_MV1V2_DL_qci.png" width="80%" />
+</p>
+
+### TMobile in Philadelphia
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/CDF_solo_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/CDF_MV1_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/CDF_MV2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/CDF_V1V2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/CDF_MV1V2_UL_throughput.png" width="45%" />
+</p>
+
+### TMobile in Philadelphia differentiating between Qcis
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_solo_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_solo_UL_qci.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV1_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV1_UL_qci.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV2_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV2_UL_qci.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_V1V2_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_V1V2_UL_qci.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV1V2_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV1V2_UL_qci.png" width="45%" />
+</p>
+
+## Verizon - CDF
+### Verizon in Boston
+Location1 & Location2 (When V2 has data)
+<p align="center">
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_solo_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV1_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_V1V2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV1V2_UL_throughput.png" width="45%" />
+</p>
+
+M & V1 overall (Including when V2 has no data)
+<p align="center">
+    <img src="./Verizon_images/CDF_BOS/MV1_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_BOS/MV1_CDF/CDF_solo_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_BOS/MV1_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_BOS/MV1_CDF/CDF_MV1_UL_throughput.png" width="45%" />
+</p>
+
+### Verizon in Atlanta
+Location1 - mmWave (When V2 has data)
+<p align="center">
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_solo_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV1_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_V1V2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV1V2_UL_throughput.png" width="45%" />
+</p>
+
+M & V1 overall (Including when V2 has no data)
+<p align="center">
+    <img src="./Verizon_images/CDF_ATL/MV1_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_ATL/MV1_CDF/CDF_solo_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./Verizon_images/CDF_ATL/MV1_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./Verizon_images/CDF_ATL/MV1_CDF/CDF_MV1_UL_throughput.png" width="45%" />
+</p>
+
+### ATT in Atlanta
+Location1-3 (When V2 has data)
+<p align="center">
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_solo_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV1_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_V1V2_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV1V2_UL_throughput.png" width="45%" />
+</p>
+
+M & V1 overall (Including V2 has no data)
+<p align="center">
+    <img src="./ATT_images/CDF_ATL/MV1_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./ATT_images/CDF_ATL/MV1_CDF/CDF_solo_UL_throughput.png" width="45%" />
+</p>
+<p align="center">
+    <img src="./ATT_images/CDF_ATL/MV1_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
+    <img src="./ATT_images/CDF_ATL/MV1_CDF/CDF_MV1_UL_throughput.png" width="45%" />
+</p>
