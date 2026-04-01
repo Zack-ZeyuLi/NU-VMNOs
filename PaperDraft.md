@@ -2,6 +2,7 @@
 IMC 2026 short paper
 
 Submission ddl: April 29th
+
 ### Core Idea
 We want to study when a VMNO truly competes with its host MNO, and what actually explains the performance gap from the RAN side.
 
