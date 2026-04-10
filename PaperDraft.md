@@ -24,7 +24,7 @@ Senario 2: Different PCI: No longer competing in the same scheduler context.
 
 <span style="color: green;">Figure 3 shows performance under different PCI</span>
 
-Senario 3: HostMNO tends to choose a worse cell.
+Senario 3: HostMNO sometimes chooses a worse cell.
 
 <span style="color: green;">Figure 4 shows connected PCI distrubution and average throughput per PCI</span>
 

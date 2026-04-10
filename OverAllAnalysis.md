@@ -1,306 +1,211 @@
-## TMobile
-### DL: Isolated Running
-|Scenario|Total rounds (BOS+PHILA)|M(TMobile)|V1(Mint)|V2(Metro)|
+# Overall measurement analysis
+
+This note consolidates **per-round win counts** (highest iperf throughput among carriers with valid samples in the same round) for the three operator families, and embeds **summary figures** used in the paper draft. Data ranges follow each family’s `valid_data_range.txt` and analysis scripts under `CarriersMeasurement`.
+
+---
+
+## 1. Per-round win statistics
+
+### 1.1 Family A — Verizon (M: PA, V1: VA1, V2: VA2)
+
+Tables are generated from `Verizon/verizon_overall_analysis.py` (`VALID`; Same PCI ∪ Diff PCI per scenario).
+
+#### Downlink (DL)
+
+| Scenario | QCI | Total rounds | M(PA) | V1(VA1) | V2(VA2) |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Isolated Running | 8 & 8 & 9 | 10 | 8 | 1 | 1 |
+| M vs V1 | 8 vs 8 | 49 | 29 | 20 | - |
+| M vs V2 | 8 vs 9 | 10 | 9 | - | 1 |
+| V1 vs V2 | 8 vs 9 | 10 | - | 10 | 0 |
+| Running Simultaneously | 8 vs 8 vs 9 | 10 | 9 | 1 | 0 |
+
+#### Uplink (UL)
+
+| Scenario | QCI | Total rounds | M(PA) | V1(VA1) | V2(VA2) |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Isolated Running | 8 & 8 & 9 | 10 | 2 | 4 | 4 |
+| M vs V1 | 8 vs 8 | 44 | 11 | 33 | - |
+| M vs V2 | 8 vs 9 | 10 | 3 | - | 7 |
+| V1 vs V2 | 8 vs 9 | 10 | - | 8 | 2 |
+| Running Simultaneously | 8 vs 8 vs 9 | 10 | 3 | 7 | 0 |
+
+---
+
+### 1.2 Family B — AT&T (M: PB, V1: VB1, V2: VB2)
+
+Tables are generated from `ATNT/att_overall_analysis.py` (`VALID`; Same PCI ∪ Diff PCI per scenario).
+
+#### Downlink (DL)
+
+| Scenario | QCI | Total rounds | M(PB) | V1(VB1) | V2(VB2) |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Isolated Running | 8 & 8 & 8 | 19 | 4 | 9 | 6 |
+| M vs V1 | 8 vs 8 | 27 | 13 | 14 | - |
+| M vs V2 | 8 vs 8 | 17 | 11 | - | 6 |
+| V1 vs V2 | 8 vs 8 | 19 | - | 8 | 11 |
+| Running Simultaneously | 8 vs 8 vs 8 | 17 | 8 | 3 | 6 |
+
+#### Uplink (UL)
+
+| Scenario | QCI | Total rounds | M(PB) | V1(VB1) | V2(VB2) |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| Isolated Running | 8 & 8 & 8 | 25 | 9 | 6 | 10 |
+| M vs V1 | 8 vs 8 | 37 | 25 | 12 | - |
+| M vs V2 | 8 vs 8 | 20 | 8 | - | 12 |
+| V1 vs V2 | 8 vs 8 | 20 | - | 6 | 14 |
+| Running Simultaneously | 8 vs 8 vs 8 | 19 | 6 | 4 | 9 |
+
+---
+
+### 1.3 Family C — T-Mobile (M: PC, V1: VC1, V2: VC2)
+
+Per-round winner = carrier with highest iperf throughput among carriers with valid samples in that round (`≥2` carriers with data). Ranges match `TMobile/valid_data_range.txt` as encoded in `tmobile_pci_qci_analysis.py`.
+
+#### DL — all valid rounds (QCI 677/67/77 ∪ QCI 999/99)
+
+| Scenario | Total rounds | M(PC) | V1(VC1) | V2(VC2) |
 |:---:|:---:|:---:|:---:|:---:|
-|677|14 (8+6)|7 (4+3)|1 (1+0)|6 (3+3)|
-|697|1 (1+0)|1|0|0|
-|977|3 (1+2)|3|0|0|
-|979|1 (0+1)|0|1|1|
-|997|1 (1+0)|1|0|0|
-|999|24 (24+0)|12|8|4|
+| Isolated Running | 39 | 15 | 12 | 12 |
+| M vs V1 | 39 | 22 | 17 | - |
+| M vs V2 | 38 | 21 | - | 17 |
+| V1 vs V2 | 40 | - | 16 | 24 |
+| Running Simultaneously | 36 | 15 | 9 | 12 |
 
-### DL: M vs V1
-|Scenario|Total rounds (BOS+PHILA)|M(TMobile)|V1(Mint)|
-|:---:|:---:|:---:|:---:|
-|67|14 (8+6)|8 (5+3)|6 (3+3)|
-|97|3 (0+3)|3|0|
-|79|1 (1+0)|0|1|
-|99|26 (26+0)|14|12|
+#### UL — all valid rounds (file currently lists only QCI 677 / 67 / 77 uplink ranges)
 
-### DL: M vs V2 
-|Scenario|Total rounds (BOS+PHILA)|M(TMobile)|V2(Metro)|
-|:---:|:---:|:---:|:---:|
-|67|14 (9+5)|10 (8+2)|4 (1+3)|
-|97|4 (2+2)|1 (0+1)|3 (2+1)|
-|99|26 (24+2)|13 (12+1)|13 (12+1)|
-
-### DL: V1 vs V2
-|Scenario|Total rounds (BOS+PHILA)|V1(Mint)|V2(Metro)|
-|:---:|:---:|:---:|:---:|
-|77|15 (8+7)|5 (5+0)|10 (3+7)|
-|97|2 (2+0)|0|2|
-|79|2 (0+2)|0|2|
-|99|25 (25+0)|13|12|
-
-### DL: Running Simultaneously
-|Scenario|Total rounds (BOS+PHILA)|M(TMobile)|V1(Mint)|V2(Metro)|
+| Scenario | Total rounds | M(PC) | V1(VC1) | V2(VC2) |
 |:---:|:---:|:---:|:---:|:---:|
-|677|11 (6+5)|7 (4+3)|2 (2+0)|2(0+2)|
-|697|1 (1+0)|1|0|0|
-|977|3 (1+2)|0|1 (1+0)|2 (0+2)|
-|979|1 (1+0)|1|0|0|
-|997|2 (0+2)|0|0|2|
-|999|26 (25+1)|10 (9+1)|8 (8+0)|8 (8+0)|
+| Isolated Running | 32 | 10 | 17 | 5 |
+| M vs V1 | 32 | 14 | 18 | - |
+| M vs V2 | 28 | 20 | - | 8 |
+| V1 vs V2 | 33 | - | 19 | 14 |
+| Running Simultaneously | 29 | 6 | 18 | 5 |
 
-### UL: Isolated Running
-|Scenario|Total rounds (BOS+PHILA)|M(TMobile)|V1(Mint)|V2(Metro)|
+#### DL — QCI 677 / 67 / 77
+
+| Scenario | Total rounds | M(PC) | V1(VC1) | V2(VC2) |
 |:---:|:---:|:---:|:---:|:---:|
-|677|32 (25+7)|14 (12+2)|18 (13+5)|0|
-|977|1 (0+1)|0|0|1|
-|979|2 (0+2)|1|0|1|
+| Isolated Running | 14 | 7 | 3 | 4 |
+| M vs V1 | 14 | 8 | 6 | - |
+| M vs V2 | 13 | 10 | - | 3 |
+| V1 vs V2 | 15 | - | 5 | 10 |
+| Running Simultaneously | 11 | 7 | 2 | 2 |
 
-### UL: M vs V1
-|Scenario|Total rounds (BOS+PHILA)|M(TMobile)|V1(Mint)|
-|:---:|:---:|:---:|:---:|
-|67|32 (25+7)|12 (10+2)|20 (15+5)|
-|97|3 (0+3)|3|0|
+#### DL — QCI 999 / 99
 
-### UL: M vs V2
-|Scenario|Total rounds (BOS+PHILA)|M(TMobile)|V2(Metro)|
-|:---:|:---:|:---:|:---:|
-|67|31 (25+6)|27 (23+4)|4 (2+2)|
-|97|2 (0+2)|1|1|
-|99|2 (0+2)|1|1|
-
-### UL: V1 vs V2
-|Scenario|Total rounds (BOS+PHILA)|V1(Mint)|V2(Metro)|
-|:---:|:---:|:---:|:---:|
-|77|33 (25+8)|24 (19+5)|9 (6+3)|
-|79|2 (0+2)|0|2|
-
-### UL: Running Simultaneously
-|Scenario|Total rounds (BOS+PHILA)|M(TMobile)|V1(Mint)|V2(Metro)|
+| Scenario | Total rounds | M(PC) | V1(VC1) | V2(VC2) |
 |:---:|:---:|:---:|:---:|:---:|
-|677|31 (25+6)|13 (12+1)|18 (13+5)|0|
-|977|2 (0+2)|0|0|2|
-|979|1 (0+1)|1|0|0|
-|999|1 (0+1)|1|0|0|
+| Isolated Running | 25 | 8 | 9 | 8 |
+| M vs V1 | 25 | 14 | 11 | - |
+| M vs V2 | 25 | 11 | - | 14 |
+| V1 vs V2 | 25 | - | 11 | 14 |
+| Running Simultaneously | 25 | 8 | 7 | 10 |
 
+#### UL — QCI 677 / 67 / 77
 
-## Verizon
-### DL:
-|Scenario|Total rounds (BOS+PHILA+ATL)|M(Verizon)|V1(Visible)|V2(Twigby)|
+| Scenario | Total rounds | M(PC) | V1(VC1) | V2(VC2) |
 |:---:|:---:|:---:|:---:|:---:|
-|Isolated Running (889)|11|7|3|1|
-|M vs V1 (88)|56|26|30|--|
-|M vs V2 (89)|11|10|--|1|
-|V1 vs V2 (89)|11|--|11|0|
-|Running Simultaneously (889)|11|10|1|0|
+| Isolated Running | 32 | 10 | 17 | 5 |
+| M vs V1 | 32 | 14 | 18 | - |
+| M vs V2 | 28 | 20 | - | 8 |
+| V1 vs V2 | 33 | - | 19 | 14 |
+| Running Simultaneously | 29 | 6 | 18 | 5 |
 
-### UL:
-|Scenario|Total rounds (BOS+PHILA+ATL)|M(Verizon)|V1(Visible)|V2(Twigby)|
+#### UL — QCI 999 / 99
+
+*No uplink rounds are listed under QCI 999/99 in `valid_data_range.txt`; totals are 0.*
+
+| Scenario | Total rounds | M(PC) | V1(VC1) | V2(VC2) |
 |:---:|:---:|:---:|:---:|:---:|
-|Isolated Running (889)|11|2|4|5|
-|M vs V1 (88)|56|18|38|--|
-|M vs V2 (89)|11|4|--|7|
-|V1 vs V2 (89)|11|--|9|2|
-|Running Simultaneously (889)|11|3|8|0|
+| Isolated Running | 0 | 0 | 0 | 0 |
+| M vs V1 | 0 | 0 | 0 | - |
+| M vs V2 | 0 | 0 | - | 0 |
+| V1 vs V2 | 0 | - | 0 | 0 |
+| Running Simultaneously | 0 | 0 | 0 | 0 |
 
+---
 
-## AT&T
-### DL:
-|Scenario|Total rounds (ATL)|M(AT&T)|V1(Cricket)|V2(H2O)|
-|:---:|:---:|:---:|:---:|:---:|
-|Isolated Running (889)|15|4|6|5|
-|M vs V1 (88)|25|13|12|--|
-|M vs V2 (89)|14|6|--|8|
-|V1 vs V2 (89)|14|--|4|10|
-|Running Simultaneously (889)|14|6|4|4|
+## 2. Figures
 
-### UL:
-|Scenario|Total rounds (ATL)|M(AT&T)|V1(Cricket)|V2(H2O)|
-|:---:|:---:|:---:|:---:|:---:|
-|Isolated Running (889)|14|6|3|5|
-|M vs V1 (88)|25|12|13|--|
-|M vs V2 (89)|14|5|--|9|
-|V1 vs V2 (89)|14|--|9|5|
-|Running Simultaneously (889)|14|5|5|4|
+### 2.1 Cross-family summary
 
-## TMobile - CDF
-### TMobile in Boston overall
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_BOS/CDF_solo_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_BOS/CDF_MV1_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_BOS/CDF_MV2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_BOS/CDF_V1V2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_BOS/CDF_MV1V2_UL_throughput.png" width="45%" />
-</p>
+![Combined DL/UL throughput across all carriers](Paper_images/overall_throughput_barplot.png)
 
-### TMobile in Boston differentiating between Qcis
-For DL only since all UL cases are 677.
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_solo_DL_qci.png" width="80%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_MV1_DL_qci.png" width="80%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_MV2_DL_qci.png" width="80%" />
-    <br>
-    <span style="font-size: 10px;">
-    *Qci7 was competing with Qci6, which makes it look bad
-    </span>
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_V1V2_DL_qci.png" width="80%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_BOS/qci_CDF/CDF_MV1V2_DL_qci.png" width="80%" />
-</p>
+**Figure 1.** Mean downlink and uplink iperf throughput (Mbps) with 95% confidence intervals for every carrier role across three host families (Verizon, AT&T, T-Mobile), aggregating all valid measurement rounds defined in each family’s analysis script.
 
-### TMobile in Philadelphia
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/CDF_solo_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/CDF_MV1_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/CDF_MV2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/CDF_V1V2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/CDF_MV1V2_UL_throughput.png" width="45%" />
-</p>
+![RTT empirical CDFs](Paper_images/rtt_cdf.png)
 
-### TMobile in Philadelphia differentiating between Qcis
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_solo_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_solo_UL_qci.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV1_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV1_UL_qci.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV2_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV2_UL_qci.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_V1V2_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_V1V2_UL_qci.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV1V2_DL_qci.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./TMobile_images/CDF_PHI/qci_CDF/CDF_MV1V2_UL_qci.png" width="45%" />
-</p>
+**Figure 2.** Empirical cumulative distribution of ping RTT (ms) per carrier, pooled over available RTT logs in the combined dataset; line styles distinguish host vs. virtual operators within each family.
 
-## Verizon - CDF
-### Verizon in Boston
-Location1 & Location2 (When V2 has data)
-<p align="center">
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_solo_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV1_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_V1V2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_BOS/loc12_CDF/CDF_MV1V2_UL_throughput.png" width="45%" />
-</p>
+---
 
-M & V1 overall (Including when V2 has no data)
-<p align="center">
-    <img src="./Verizon_images/CDF_BOS/MV1_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_BOS/MV1_CDF/CDF_solo_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_BOS/MV1_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_BOS/MV1_CDF/CDF_MV1_UL_throughput.png" width="45%" />
-</p>
+### 2.2 Family A — Verizon
 
-### Verizon in Atlanta
-Location1 - mmWave (When V2 has data)
-<p align="center">
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_solo_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV1_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_V1V2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_ATL/location_1_CDF/CDF_MV1V2_UL_throughput.png" width="45%" />
-</p>
+![Verizon family overall DL throughput by scenario](Paper_images/A_overall_DL_barplot.png)
 
-M & V1 overall (Including when V2 has no data)
-<p align="center">
-    <img src="./Verizon_images/CDF_ATL/MV1_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_ATL/MV1_CDF/CDF_solo_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./Verizon_images/CDF_ATL/MV1_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./Verizon_images/CDF_ATL/MV1_CDF/CDF_MV1_UL_throughput.png" width="45%" />
-</p>
+**Figure 3.** Verizon family: mean DL throughput (Mbps) per scenario (Solo, M vs V1, …) for PA (host), VA1, and VA2; error bars show 95% CI over valid rounds (Boston + Atlanta).
 
-### ATT in Atlanta
-Location1-3 (When V2 has data)
-<p align="center">
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_solo_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV1_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_V1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_V1V2_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV1V2_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./ATT_images/CDF_ATL/loc123_CDF/CDF_MV1V2_UL_throughput.png" width="45%" />
-</p>
+![Verizon family overall UL throughput by scenario](Paper_images/A_overall_UL_barplot.png)
 
-M & V1 overall (Including V2 has no data)
-<p align="center">
-    <img src="./ATT_images/CDF_ATL/MV1_CDF/CDF_solo_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./ATT_images/CDF_ATL/MV1_CDF/CDF_solo_UL_throughput.png" width="45%" />
-</p>
-<p align="center">
-    <img src="./ATT_images/CDF_ATL/MV1_CDF/CDF_MV1_DL_throughput.png" width="45%" /> &nbsp; &nbsp; &nbsp;
-    <img src="./ATT_images/CDF_ATL/MV1_CDF/CDF_MV1_UL_throughput.png" width="45%" />
-</p>
+**Figure 4.** Verizon family: mean UL throughput (Mbps) with the same scenario layout and statistics as Figure 4.
+
+![Verizon family DL throughput by PCI split](Paper_images/A_PCI_DL_barplot.png)
+
+**Figure 5.** Verizon family DL: stacked panels comparing **Same PCI** (top) vs **Diff PCI** (bottom) subsets from `valid_data_range.txt`; bars are means with 95% CI.
+
+![Verizon family UL throughput by PCI split](Paper_images/A_PCI_UL_barplot.png)
+
+**Figure 6.** Verizon family UL: same Same/Diff PCI layout as Figure 6 for uplink traffic.
+
+---
+
+### 2.3 Family B — AT&T
+
+![AT&T family overall DL throughput by scenario](Paper_images/B_overall_DL_barplot.png)
+
+**Figure 7.** AT&T family: mean DL throughput (Mbps) for PB, VB1, and VB2 across scenarios; 95% CI from valid Boston + Atlanta rounds.
+
+![AT&T family overall UL throughput by scenario](Paper_images/B_overall_UL_barplot.png)
+
+**Figure 8.** AT&T family: mean UL throughput (Mbps) with the same grouping as Figure 8.
+
+![AT&T family DL throughput by PCI split](Paper_images/B_PCI_DL_barplot.png)
+
+**Figure 9.** AT&T family DL: **Same PCI** vs **Diff PCI** stacked bar comparison (means ± 95% CI), per `ATNT/valid_data_range.txt`.
+
+![AT&T family UL throughput by PCI split](Paper_images/B_PCI_UL_barplot.png)
+
+**Figure 10.** AT&T family UL: Same/Diff PCI split analogous to Figure 10.
+
+---
+
+### 2.4 Family C — T-Mobile
+
+![T-Mobile family overall DL throughput by scenario](Paper_images/C_overall_DL_barplot.png)
+
+**Figure 11.** T-Mobile family: mean DL throughput (Mbps) for PC, VC1, and VC2 over Boston (DL) + Philadelphia valid rounds.
+
+![T-Mobile family overall UL throughput by scenario](Paper_images/C_overall_UL_barplot.png)
+
+**Figure 12.** T-Mobile family: mean UL throughput (Mbps); Boston uses dedicated UL measurement trees, Philadelphia shares main paths per `valid_data_range.txt`.
+
+![T-Mobile family DL throughput by PCI split](Paper_images/C_PCI_DL_barplot.png)
+
+**Figure 13.** T-Mobile family DL: **Same PCI** (top) vs **Diff PCI** (bottom) with means and 95% CI, following encoded PCI ranges in `TMobile/valid_data_range.txt`.
+
+![T-Mobile family UL throughput by PCI split](Paper_images/C_PCI_UL_barplot.png)
+
+**Figure 14.** T-Mobile family UL: Same/Diff PCI layout as Figure 14 for uplink.
+
+![T-Mobile family DL throughput by QCI bucket](Paper_images/C_QCI_DL_barplot.png)
+
+**Figure 15.** T-Mobile family DL: **QCI 677-class** (67/77, top) vs **QCI 999-class** (99, bottom); each panel pools Same+Diff PCI rounds within that QCI bucket.
+
+![T-Mobile family UL throughput by QCI bucket](Paper_images/C_QCI_UL_barplot.png)
+
+**Figure 16.** T-Mobile family UL: **QCI 677-class** only (single panel); no uplink QCI 999-class rounds are defined in the current valid-range file, so no second panel is shown.
+
+---
+
+*Source tables: `Verizon/statistic.md`, `ATNT/statistic.md`, `TMobile/statistic.md`. Figures copied to `NEU-VMNOs/Paper_images/` for this document.*
