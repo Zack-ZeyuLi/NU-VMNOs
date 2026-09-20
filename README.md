@@ -3,10 +3,6 @@
 In this repository, we release the dataset and scripts used in the IMC '26 paper,
 *Beyond QCI: Understanding Performance Competition Between an MVNO and Its Host MNO*.
 
-<p align="center">
-<img src="mno_architecture.png" width="400"/>
-</p>
-
 **Authors**:
 [[Zeyu Li](https://github.com/Zack-ZeyuLi)]
 [[Yufei Feng](https://www.linkedin.com/in/yufei-feng-7b268820b)]
