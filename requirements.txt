@@ -1,0 +1,6 @@
+matplotlib==3.10.6
+numpy==2.3.3
+pandas==2.3.3
+Pillow==11.3.0
+# optional: only needed by scripts/plot_locations.py (interactive site map)
+folium==0.20.0

@@ -1,0 +1,43 @@
+#backend              : SVG
+#backend	      : qt4agg
+figure.autolayout     : True 
+
+svg.fonttype          : none
+font.family           : sans-serif
+font.sans-serif       : Verdana
+font.weight           : bold
+
+axes.labelsize        : 20
+# axes.labelsize        : 34
+# axes.labelsize        : 38
+axes.labelweight      : bold
+#axes.grid             : True
+#axes.prop_cycle       : cycler('color', 'black')
+
+
+xtick.labelsize       : 20
+ytick.labelsize       : 20
+# xtick.labelsize       : 34
+# ytick.labelsize       : 34
+# xtick.labelsize       : 38
+# ytick.labelsize       : 38
+
+lines.linewidth       : 2.5
+lines.color           : black
+lines.markeredgewidth : 2 
+
+legend.numpoints      : 1
+legend.fontsize       : 20
+legend.title_fontsize : 20
+# legend.fontsize       : 34
+# legend.title_fontsize : 34
+# legend.fontsize       : 38
+# legend.title_fontsize : 38
+markers.fillstyle     : none
+
+savefig.dpi           : 300
+savefig.bbox          : tight
+savefig.format        : svg
+pdf.fonttype          : 42
+ps.fonttype           : 42
+

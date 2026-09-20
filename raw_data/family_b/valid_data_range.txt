@@ -1,0 +1,312 @@
+## Notation:
+## HB : host MNO of operator Family B
+## VB1: MVNO 1 riding on HB
+## VB2: MVNO 2 riding on HB
+
+All valid data:
+Downlink:
+
+    ## FolderPath (relative to raw_data/family_b/iperf/):
+    ## M_Boston:boston/HB
+    ## M_Atlanta:atlanta/HB
+    ## V1_Boston:boston/VB1
+    ## V1_Atlanta:atlanta/VB1
+    ## V2_Boston:boston/VB2
+    ## V2_Atlanta:atlanta/VB2
+
+    Senario 1: 3 Operators run seperately
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+    Senario 2: HB vs VB1
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4, Round5
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4, Round5
+            Location4: Round1, Round2, Round3, Round4, Round5
+            Location5: Round1, Round2, Round3, Round4, Round5
+    Senario 3: HB vs VB2
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+    Senario 4: VB1 vs VB2
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3
+    Senario 5: HB vs VB1 vs VB2
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3
+
+Uplink:
+
+    ## FolderPath (relative to raw_data/family_b/iperf/):
+    ## M_Boston:boston/HB
+    ## M_Atlanta:atlanta/HB
+    ## V1_Boston:boston/VB1
+    ## V1_Atlanta:atlanta/VB1
+    ## V2_Boston:boston/VB2
+    ## V2_Atlanta:atlanta/VB2
+
+    Senario 1: 3 Operators run seperately
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+    Senario 2: HB vs VB1
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4, Round5
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4, Round5
+            Location4: Round1, Round2, Round3, Round4, Round5
+            Location5: Round1, Round2, Round3, Round4, Round5
+    Senario 3: HB vs VB2
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+    Senario 4: VB1 vs VB2
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3
+    Senario 5: HB vs VB1 vs VB2
+        Boston:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3, Round4
+        Atlanta:
+            Location1: Round1, Round2, Round3, Round4, Round5
+            Location2: Round1, Round2, Round3, Round4, Round5
+            Location3: Round1, Round2, Round3
+
+
+5G only:
+Downlink:
+
+    ## FolderPath (relative to raw_data/family_b/iperf/):
+    ## M_Boston:boston/HB
+    ## M_Atlanta:atlanta/HB
+    ## V1_Boston:boston/VB1
+    ## V1_Atlanta:atlanta/VB1
+    ## V2_Boston:boston/VB2
+    ## V2_Atlanta:atlanta/VB2
+
+    Senario 1: 3 Operators run seperately
+        Boston:
+            Same PCI:
+                Location1: Round1
+                Location2: Round5
+                Location3: Round3
+            Diff PCI:
+                Location2: Round1, Round2, Round3, Round4
+                Location3: Round1, Round2
+        Atlanta:
+            Same PCI:
+                Location2: Round1, Round2, Round3
+                Location3: Round1, Round2, Round3, Round4
+            Diff PCI:
+                Location1: Round4
+                Location2: Round4, Round5
+
+    Senario 2: HB vs VB1
+        Boston:
+            Same PCI:
+                Location1: Round3, Round4, Round5
+                Location2: Round2, Round3, Round5
+                Location3: Round1, Round3
+            Diff PCI:
+                Location2: Round1, Round4
+        Atlanta:
+            Same PCI:
+                Location2: Round1, Round2, Round3
+                Location3: Round1, Round2, Round3, Round4, Round5
+                Location5: Round1, Round2, Round3, Round4, Round5
+            Diff PCI:
+                Location1: Round1, Round4
+                Location2: Round4, Round5
+
+    Senario 3: HB vs VB2
+        Boston:
+            Same PCI:
+                Location1: Round5
+                Location2: Round4, Round5
+            Diff PCI:
+                Location2: Round1, Round2, Round3
+                Location3: Round1, Round3
+        Atlanta:
+            Same PCI:
+                Location3: Round1, Round2, Round3, Round4
+            Diff PCI:
+                Location2: Round1, Round2, Round3, Round4, Round5
+    
+    Senario 4: VB1 vs VB2
+        Boston:
+            Same PCI:
+                Location1: Round1, Round5
+                Location2: Round1, Round3
+                Location3: Round4
+            Diff PCI:
+                Location2: Round2, Round4, Round5
+                Location3: Round1, Round3
+        Atlanta:
+            Same PCI:
+                Location2: Round4
+                Location3: Round1, Round2, Round3
+            Diff PCI:
+                Location1: Round1
+                Location2: Round1, Round2, Round3, Round5
+
+    Senario 5: HB vs VB1 vs VB2
+        Boston:
+            Same PCI:
+                Location1: Round5
+                Location2: Round1, Round3
+            Diff PCI:
+                Location1: Round3
+                Location2: Round2, Round4, Round5
+                Location3: Round1, Round2
+        Atlanta:
+            Same PCI:
+                Location2: Round4
+                Location3: Round1, Round2, Round3
+            Diff PCI:
+                Location2: Round1, Round2, Round3, Round5
+
+Uplink:
+
+    ## FolderPath (relative to raw_data/family_b/iperf/):
+    ## M_Boston:boston/HB
+    ## M_Atlanta:atlanta/HB
+    ## V1_Boston:boston/VB1
+    ## V1_Atlanta:atlanta/VB1
+    ## V2_Boston:boston/VB2
+    ## V2_Atlanta:atlanta/VB2
+
+    Senario 1: 3 Operators run seperately
+        Boston:
+            Same PCI:
+                Location1: Round1
+                Location2: Round5
+                Location3: Round3
+            Diff PCI:
+                Location1: Round2, Round3, Round4, Round5
+                Location2: Round1, Round2, Round3, Round4
+                Location3: Round1, Round2, Round4
+        Atlanta:
+            Same PCI:
+                Location2: Round1, Round2, Round3
+                Location3: Round1, Round3
+            Diff PCI:
+                Location1: Round1, Round2, Round3, Round4
+                Location3: Round2, Round4
+
+    Senario 2: HB vs VB1
+        Boston:
+            Same PCI:
+                Location1: Round3, Round4, Round5
+                Location2: Round2, Round3, Round5
+                Location3: Round1, Round3
+            Diff PCI:
+                Location1: Round1, Round2
+                Location2: Round1, Round4
+                Location3: Round2, Round4, Round5
+        Atlanta:
+            Same PCI:
+                Location2: Round1, Round2, Round3
+                Location3: Round2, Round3, Round4, Round5
+                Location4: Round2, Round3, Round4, Round5
+                Location5: Round1, Round2, Round3, Round4, Round5
+            Diff PCI:
+                Location1: Round1, Round2, Round3, Round4, Round5
+                Location3: Round1
+
+    Senario 3: HB vs VB2
+        Boston:
+            Same PCI:
+                Location1: Round5
+                Location2: Round4, Round5
+                Location3: Round2
+            Diff PCI:
+                Location1: Round1, Round3, Round4
+                Location2: Round1, Round2, Round3
+                Location3: Round1, Round3, Round4
+        Atlanta:
+            Same PCI:
+                Location3: Round1, Round2, Round3, Round4
+            Diff PCI:
+                Location1: Round1, Round2, Round3
+    
+    Senario 4: VB1 vs VB2
+        Boston:
+            Same PCI:
+                Location1: Round1, Round5
+                Location2: Round1, Round3
+            Diff PCI:
+                Location1: Round3, Round4
+                Location2: Round2, Round4, Round5
+                Location3: Round1, Round2, Round3
+        Atlanta:
+            Same PCI:
+                Location1: Round4
+                Location3: Round2, Round3
+            Diff PCI:
+                Location1: Round1, Round2, Round3, Round5
+                Location3: Round1
+
+    Senario 5: HB vs VB1 vs VB2
+        Boston:
+            Same PCI:
+                Location1: Round5
+                Location2: Round1, Round3
+            Diff PCI:
+                Location1: Round1, Round3, Round4
+                Location2: Round2, Round4, Round5
+                Location3: Round1, Round2, Round3
+        Atlanta:
+            Same PCI:
+                Location1: Round5
+                Location3: Round2, Round3
+            Diff PCI:
+                Location1: Round1, Round2, Round3
+                Location3: Round1

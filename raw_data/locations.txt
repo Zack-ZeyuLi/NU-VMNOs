@@ -1,0 +1,16 @@
+Test locations:
+    Boston:
+        (Latitude: 42.42634, Longitude: -71.07327)
+        (Latitude: 42.35516, Longitude: -71.05980)
+        (Latitude: 42.37266, Longitude: -71.11842)
+        (Latitude: 42.34043, Longitude: -71.08790)
+        (Latitude: 42.36430, Longitude: -71.02078)
+    Atlanta:
+        (Latitude: 33.75960, Longitude: -84.39310)
+        (Latitude: 33.75830, Longitude: -84.38710)
+        (Latitude: 33.75745, Longitude: -84.38240)
+        (Latitude: 33.77410, Longitude: -84.39900)
+        (Latitude: 33.78100, Longitude: -84.40013)
+    Philadelphia:
+        (Latitude: 39.95481, Longitude: -75.19760)
+        (Latitude: 39.95343, Longitude: -75.15691)
